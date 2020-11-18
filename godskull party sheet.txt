@@ -1,0 +1,69 @@
+Arson Beetle-Friend Bookstabber
+5 HP
+
+STR 
+DEX 
+CON
+INT 
+WIS
+CHA
+
+ACHIEVEMENTS 
+Committed Arson
+survived spike-lizard
+
+----
+
+Goop Goop Goblin-Friend Spike-Thrower
+5 HP
+STR • 12 +2
+DEX • 11 +1
+CON • 10 +0
+INT • 9 -1
+WIS • 6 -4
+CHA • 8 -2
+survived spike-lizard
+
+---
+
+James James 
+4 HP
+ACHIEVEMENTS
+survived spike-lizard
+Died 
+
+----
+
+Weird Gnar Dagger-Stabber The Shredder
+
+-+1 Attack Bonus (+another 1 if you know something important about your enemy)
+-Sneak Attack: +1d6 damage when striking an enemy while hidden.
+-+1 Special Attack chosen from the Weapon List
+
+Transparent Skin
+Tent
+Bear Trap
+Dagger
+Lens
+
+----
+
+Blean Good Ears Sword-Goo
+5HP
+
+STR • 10
+DEX • 12
+CON • 6
+INT • 6
+WIS (+2 for good ears) • 16 + 2
+CHA • 14
+
++2 Wisdom 
+
+- You have 1 Magic Die (a d6) which you roll each time you cast a spell.  If you roll a 1 you cause a Calamity, if you roll a 2-3 your magic die is exhausted for the day, if you roll a 4-6 you keep it.
+- 2 Spellbooks, see spell list on the 5th page for details.
+- 1 cantrip chosen from this list:
+1. You can change some but not all of the visual properties of an object you touch (color, brightness, texture, level of hair)
+2. You can create small physical objects like wrenches or dildoes.
+3. You can move things with Your Mind, only small objects.
+4. You can add 1 Magic Die to a spell by performing a Sacrifice (killing another creature or permanently losing 1d4 HP).
