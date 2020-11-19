@@ -157,7 +157,7 @@ Whip
 Warhammer
 Scimitar
 Shortbow
-SIckle
+Sickle
 Sling
 Spear
 Staff

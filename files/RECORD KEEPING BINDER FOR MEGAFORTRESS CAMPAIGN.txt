@@ -1,0 +1,48 @@
+Long ago, the Sun God Solace was killed in battle by evil heretics who remain nameless for reasons lost to time. His followers became worshippers of Death and the Sun became cold and white, leaving the world in an increasingly strange and slightly fluorescent light instead of natural sunshine. Plants wither a little more now but otherwise everything is the same. The Corpse of the Sun God Solace was buried by his followers, who left the head sticking out of the ground and built a fortress on top of it.
+---
+Danny Money
+80G
+
+---
+
+KNOWN SPELL COMPENDIUM
+
+DIMENSION DOOR
+
+MUTATE (CAST ON THE PARTY)
+
+FIREBALL
+
+MAGIC MISSILE (CAST)
+
+RAISE DEAD (CAST)
+
+MOSS GOLEM (CAST)
+
+LIQUID MORPH
+
+---
+
+MONSTERS
+Slavering Worm-Hulk
+4HD, Good Punch
++6 Attack
+
+Armored Lizard-Knight
+6HD, Mouth is Daggers, Extra Bite Attack
+
+Chest Trap-Gnome
+1HD, Tiny, in a chest, poisons you, no other marketable skills, squash-able
+
+Biomancer-Barbarian
+3HD, Slowly turning into ooze, Regenerate, Notched Dismembering Axe
++4 Attack, 1d8+1 damage, dismembers on an 8
+
+Ghoul Knight
+3HD
++4 Defense
++4 Attack, 3x attack
+
+Fortress Mooks
+1 or 2HD
+Helmets +1 Defense
