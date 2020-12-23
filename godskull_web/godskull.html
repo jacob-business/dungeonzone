@@ -1,12 +1,16 @@
 <h1>G O D S K U L L M E G A F O R T R E S S</h1>
 
-<pre>LOOT GENERATOR</pre>
+<pre>LOOT GENERATOR
+NOTES:
+Loot the Body is for exactly what it sounds like as well as pickpocketing people and looting furniture. It has a small chance of giving a Magic Item but will never yield very large amounts of gold.
+Treasure Chest is for exactly what it sounds like. It will always yield 1 Loot the Body result, 1 large amount of gold, and 1 magic item. I might roll at the table to decided if the chest contains all 3 results or not.
+Magic Items is for exactly what it sounds like and it doesn't roll on any other table, most of its results are from Grave right now.
+Sources: Grave, Maze Rats, Die Trying, DonJon's pickpocket loot generator, AD&D Dungeon Master's Guide, probably another place.
+</pre>
 
 <button onclick='selectRandom_3fv()'>Generate</button>
 <div id='outputText_3fv'></div>
-
 <script>
-
 function expandString(str, map) {
   var recur_limit = 20
   while (str.match(/{.*?}/) && recur_limit > 0){
@@ -30,22 +34,95 @@ function expandString(str, map) {
   }
   return str
 }
-
 var lists_3fv = {
   loot_the_bodypickpocket: [`87 gp`, `5 gp, 35 sp`, `Blob of iron, Correspondence`, `Black Pearl (500 gp), Blood-stained map of the Dark Halls of Worms`, `Blood sausage, Fragments of a shattered sword`, `Pouch of pipeweed`, `Small skull, Contract for services`, `72 sp`, `3 sp, 78 cp`, `List of local taverns`, `1 sp, 67 cp, Five iron nails`, `Mouldy bread`, `String of wooden beads`, `4 sp, 79 cp`, `5 cp, Zircon (50 gp)`, `4 cp, Potion of Healing (400 gp)`, `43 gp`, `Amethyst (100 gp), Tattered map of the Lost Gauntlet of the Goblin King`, `2 unusual coins, Map of a nearby castle`, `Stale bread, Ring of iron keys`, `84 sp, Magnifying Glass (100 gp)`, `Block of soap`, `Black chalk, Correspondence`, `20 gp`, `Deep Blue Spinel (500 gp)`, `65 gp, Patch of chainmail`, `37 sp`, `4 gp, 26 sp, Freshwater Pearl (10 gp)`, `Potion of Levitation (400 gp), Directions to the Lost Crypts of Terror`, `7 sp, 71 cp`, `Potion of Clairaudience (400 gp)`, `91 cp, Potion of Poison`, `9 sp, 34 cp`, `28 sp`, `Rhodochrosite (10 gp)`, `Potion of Levitation (400 gp), Ring of iron keys`, `Flint and Steel (1 gp), Blood-stained map of the Forsaken Prison of Souls`, `Simple Lock (20 gp), Deed to a small property`, `9 gp, 54 sp`, `31 cp`, `47 gp`, `Mushrooms (poisonous), Deed to a ruined tower`, `Wooden comb`, `37 gp`, `10 sp, 41 cp, Flint and Steel (1 gp)`, `57 cp, Page torn from a spellbook`, `Map of a nearby castle, Shopping list`, `Chalk, Identification document`, `Chestnuts`, `Pouch of berries`, `Battle Axe`, `Smoky Quartz (50 gp)`, `Potion of Plant Control (300 gp)`, `20 sp`, `92 gp, Glass Cutter (25 gp)`, `39 cp, Pouch of pixie dust`, `Blood sausage`, `63 cp, Obsidian (10 gp)`, `Cloth game board and wooden tokens, Lacy undergarments`, `Hardtack, Etching portrait of a feared beast`, `Map of a nearby castle, Tattered map of the Barrow of the Vampire Queen`, `Bowl`, `Brass Bell`, `Brooch`, `Carved Figurine`, `Cup`, `Deck of Cards`, `Long Fork`, `Numbered key`, `Oil Lamp`, `Old Doll`, `Paint Pot`, `Pencil`, `Drawing`, `Coin`, `Glass eye`, `Glass jar`, `Hair comb`, `Purse`, `Quill`, `Salve`, `Scissors`, `Scroll`, `Sealed Letter`, `Sewing Needle`, `Shaving Razor`, `Silver button`, `skull`, `Tobacco pipe`, `Wine bottle`, `Arming sword`, `Crossbow`, `Bling Flail`, `Golden Spear`, `Engraved Halberd`, `hammer`, `Crowbar`, `Longbow`, `Hatchet`, `Telescopic Lance`, `Stake`, `Stiletto`, `Throwing Axe`, `Warpick`, `Whip`, `Warhammer`, `Scimitar`, `Shortbow`, `SIckle`, `Sling`, `Spear`, `Staff`, `Longsword`, `Crystal-pomeled Greatsword`, `Shortsword`, `Mace`, `Spike Ball`, `Battle Axe`, `Club`, `Claymore`, `Arming Sword`, `Glaive`, `Flail`, `Dagger`, `Cutlass`, `Crossbow`, `Acid Flask`, `Bear Trap`, `Bellows`, `Bolt-cutters`, `Chain`, `Chisel`, `Lens`, `Lock/Key`, `Lockpicks`, `Manacles`, `Metal File`, `Mortar/Pestle`, `Crowbar`, `Door Ram`, `Ear Trumpet`, `Fire Oil`, `Fishing Hook`, `Goggles`, `Needle`, `Pickaxe`, `Pitchfork`, `Pliers`, `Pole`, `Pulleys`, `Grappling Hook`, `Grease`, `Hacksaw`, `Hammer`, `Hand Drill`, `Lantern`, `Rope`, `Scissors`, `Shovel`, `Spikes`, `Steel Wire`, `Tongs`, `{Magic Items}`, `{Magic Items}`],
-  magic_items: [`Ring of the Archmage. Stamp melted wax with this ring to store a spell you can cast, targeting anyone who breaks the seal. Includes 5 candles (1 slot).`, `Ring of the Breakable Bond. A gold ring. When killed in battle, your tangible spirit emerges, fully equipped and with full HP. Give in to resurrection or heal your body to reenter it. If you ever willingly abandon an ally in need, the ring breaks irreparably.`, `Ring of the Eagle Eye. See as far as if you were using a spyglass. Add a d6 to long-range attack rolls.`, `Ring of the Ghostwatcher. Appear translucent.`, `Ring of the Loyal. Wearer disappears, summoned to fulfill an oath, when their player leaves the room to bring others food or drink. 2 in 3 chance of returning with another Treasure until 3 have been collected.`, `Ring of Rejuvenation. When you have a moment to catch a breath, if you have 0 stamina, gain 1 stamina.`, `Ring of Ruin. Allow your weapon to be damaged for +d12 damage on a hit, or broken for +d20 damage.`, `Ring of the Stranger. Appear unrecognizable as yourself (though not as anybody else in particular).`, `Ring of the Vicious Mongoose. On a successful hand-to-hand attack, you may grapple automatically.`, `Ring of the Wily Serpent. While carrying only 1 - slot items or lighter, defend with DEX, not ARMOR.`, `Ash Wand. Grants +1 MD once and then burns away completely.`, `Basilisk Tooth Carved into an enchanted dagger (d6 damage). Petrifies on a critical hit or max damage.`, `Cryptic Prophecy. When an ally rolls a critical hit or maximum damage against a named enemy, you may utter, "Look! Just as was foretold!” The target dies. 1 use.`, `Dark River Water. Drink to erase memories. 1 use.`, `Death's Head Buckle. Given a clear shot, enemies will attack you over allies. (Remind referee as needed.)`, `Diabolist's Vestments. Improve reaction rolls with demons by 1 step, or grant such a roll at all. Doubles as a useful disguise in hell.`, `Dragon Idol.  Command word etched on bottom covers your body in scales and contorts your features to become more draconic (+1 ARMOR; sacrifice blood for d6 area fire damage) until you die or idol breaks. Prevents wearing armor or speaking very clearly.`, `Demon Magistrate’s Gavel. A massive hammer (d12 damage, 4 slots). Damage or break ARMOR on a hit.`, `Golden Fruit. Eat to clear decay and reset deaths to 0.`, `Gravestone Chip. Transport yourself and willing allies to a gravesite you’ve been to.`, `Hands of Saint Regulus. Replace your hands with these to make your unarmed attacks deal d8 damage, with advantage against unholy targets.`, `Iron Locket. Store carried souls inside to resurrect with them. Must repair to reuse after resurrection.`, `Jade Pig. Figurine that fits in the palm of your hand. Toss at ground to transform it into a real, ornery pig (1 HD, d4 damage), with no particular attachment to you. Transforms back to jade if lowered to 0 HP.`, `Jesiah’s Hammer and Tongs. Tongs get +d6 to grapple by the tongue. Hammer deals d6 damage, or d20 to a target who tells a lie while grappled by tongs.`, `Kingfisher Brooch. Sacrifice a fish and snatch a visible item, even to catch a projectile; no roll needed.`, `Lodestone Bracelet. Pull an unattended ferrous item to you as an action; save with DEX to catch safely.`, `Lost Soul. Separated from its owner somehow, but a bright glow suggests some awareness. It tugs gently in the direction of its remains; can be returned to a grateful owner, or subsumed for +1 to any ability.`, `Many-notched Bow. Can fire up to as many arrows at once as your level, spread out over an area.`, `Marble Sepulcher. Contains 41,343 souls; siphoning any makes mortal enemies of a holy order dedicated to preserving souls from being traded or subsumed.`, `Mourner’s Bell. Forces incorporeal beings to solidify.`, `Murderer’s Glass Eye. Replace one of your own eyes with it. Squint at someone as they speak to sense whether they mean to kill you or innocents.`, `Papery Armor. Oddly thin fluted plate armor, with a helmet that sits like a paper hat (+7 ARMOR, 1 slot).`, `Pendant. Effect unknown, but rumored to possess great powers.`, `Phantasm Larva. Hold with tongue on roof of`, `mouth to hear nearby thoughts as ongoing murmur- ing. Make a WIS save to make out one "voice," or to not swallow when you take damage.`, `Pilgrim’s Walking Stick. Use WIS to attack (d8 damage, 2 slots). May also use WIS to defend in an en- counter if neither you nor allies provoked hostilities.`, `Rod of Office. Save CHA vs. INT to command human- like target to kneel, lay down arms, or flee.`, `Iron Key. Permanently lock or unlock a door. 1 use. 38.`, `Sacrificial Dagger. A black, wavy blade (d6 damage). With a free hand, you may spend HP in place of stamina to cast witchcraft spells. May use your CHA bonus in place of level to determine max S when casting. 39.`, `Saint's Ashes. Each pinch used counts as 1 stamina toward casting a theurgy spell (up to 3 pinches), or throw all 3 pinches on a fire while repairing an ordinary broken weapon to make it glow brightly, blinding unholy enemies while they look toward it.`, `Sacred Medallion. Add your WIS bonus to any HP you restore with theurgy. May use your WIS bonus in place of level to determine max S when casting.`, `Septifocals. Seven-lensed spectacles with gold wire frames. Spend 1 stamina to sense a target’s name, HD, HP, ARMOR, stamina, souls held, and prepared spells.`, `Silver Wings. Worn on back; they move on their own to deflect attacks (+2 ARMOR, 2 slots).`, `Spacious Satchel. Can stow an impossible number of 1-slot or smaller items. Requires rooting around for several minutes with decent lighting to retrieve items.`, `Starmetal. Graft into an ordinary weapon to increase damage 1 die size; count its damage as magical. 1 use.`, `Summoning Stone. Once per hour, scratch a circle for a 50/50 chance to summon a spirit (d10 HD) of a random Background. Spirits under 5 HD are helpful; over 6 HD are evil; 5–6 HD spirits are unpredictable.`, `Tiny Steeds. Quartet of wooden figurines (1 slot). Command to grow into a mount (2 HD) or turn back.`, `Titan’s Key. Giant brass key, usable as a two-handed blunt weapon (d12 damage, 4 slots). Said to fit a lock securing an even greater treasure.`, `Trisagonist Skull. Six-eye-socketed and pearlescent. Hold aloft to make it thrum with song, bathing area in white light as all carried souls nearby spiral upward. Souls may be intercepted within 1 round before they fly skyward, after which skull crumbles to dust.`, `Waxen Hand. Can cast and be taught spells. (Rub its fingers over the pages.) When you roll a 1 with it (or whenever you choose), it casts a spell at random. Fingers move when not in use, making arcane signs.`, `Xeno’s Grimoire. Contains d4 + 1 random spells. One can be learned instantly; others require a mentor`],
+  magic_items: [`Ring of the Archmage. Stamp melted wax with this ring to store a spell you can cast, targeting anyone who breaks the seal. Includes 5 candles (1 slot).`, `Ring of the Breakable Bond. A gold ring. When killed in battle, your tangible spirit emerges, fully equipped and with full HP. Give in to resurrection or heal your body to reenter it. If you ever willingly abandon an ally in need, the ring breaks irreparably.`, `Ring of the Eagle Eye. See as far as if you were using a spyglass. Add a d6 to long-range attack rolls.`, `Ring of the Ghostwatcher. Appear translucent.`, `Ring of the Loyal. Wearer disappears, summoned to fulfill an oath, when their player leaves the room to bring others food or drink. 2 in 3 chance of returning with another Treasure until 3 have been collected.`, `Ring of Rejuvenation. When you have a moment to catch a breath, if you have 0 stamina, gain 1 stamina.`, `Ring of Ruin. Allow your weapon to be damaged for +d12 damage on a hit, or broken for +d20 damage.`, `Ring of the Stranger. Appear unrecognizable as yourself (though not as anybody else in particular).`, `Ring of the Vicious Mongoose. On a successful hand-to-hand attack, you may grapple automatically.`, `Ring of the Wily Serpent. While carrying only 1 - slot items or lighter, defend with DEX, not ARMOR.`, `Ash Wand. Grants +1 MD once and then burns away completely.`, `Basilisk Tooth Carved into an enchanted dagger (d6 damage). Petrifies on a critical hit or max damage.`, `Cryptic Prophecy. When an ally rolls a critical hit or maximum damage against a named enemy, you may utter, "Look! Just as was foretold!” The target dies. 1 use.`, `Dark River Water. Drink to erase memories. 1 use.`, `Death's Head Buckle. Given a clear shot, enemies will attack you over allies. (Remind referee as needed.)`, `Diabolist's Vestments. Improve reaction rolls with demons by 1 step, or grant such a roll at all. Doubles as a useful disguise in hell.`, `Dragon Idol.  Command word etched on bottom covers your body in scales and contorts your features to become more draconic (+1 ARMOR; sacrifice blood for d6 area fire damage) until you die or idol breaks. Prevents wearing armor or speaking very clearly.`, `Demon Magistrate’s Gavel. A massive hammer (d12 damage, 4 slots). Damage or break ARMOR on a hit.`, `Golden Fruit. Eat to clear decay and reset deaths to 0.`, `Gravestone Chip. Transport yourself and willing allies to a gravesite you’ve been to.`, `Hands of Saint Regulus. Replace your hands with these to make your unarmed attacks deal d8 damage, with advantage against unholy targets.`, `Iron Locket. Store carried souls inside to resurrect with them. Must repair to reuse after resurrection.`, `Jade Pig. Figurine that fits in the palm of your hand. Toss at ground to transform it into a real, ornery pig (1 HD, d4 damage), with no particular attachment to you. Transforms back to jade if lowered to 0 HP.`, `Jesiah’s Hammer and Tongs. Tongs get +d6 to grapple by the tongue. Hammer deals d6 damage, or d20 to a target who tells a lie while grappled by tongs.`, `Kingfisher Brooch. Sacrifice a fish and snatch a visible item, even to catch a projectile; no roll needed.`, `Lodestone Bracelet. Pull an unattended ferrous item to you as an action; save with DEX to catch safely.`, `Lost Soul. Separated from its owner somehow, but a bright glow suggests some awareness. It tugs gently in the direction of its remains; can be returned to a grateful owner, or subsumed for +1 to any ability.`, `Many-notched Bow. Can fire up to as many arrows at once as your level, spread out over an area.`, `Marble Sepulcher. Contains 41,343 souls; siphoning any makes mortal enemies of a holy order dedicated to preserving souls from being traded or subsumed.`, `Mourner’s Bell. Forces incorporeal beings to solidify.`, `Murderer’s Glass Eye. Replace one of your own eyes with it. Squint at someone as they speak to sense whether they mean to kill you or innocents.`, `Papery Armor. Oddly thin fluted plate armor, with a helmet that sits like a paper hat (+7 ARMOR, 1 slot).`, `Pendant. Effect unknown, but rumored to possess great powers.`, `Phantasm Larva. Hold with tongue on roof of`, `mouth to hear nearby thoughts as ongoing murmur- ing. Make a WIS save to make out one "voice," or to not swallow when you take damage.`, `Pilgrim’s Walking Stick. Use WIS to attack (d8 damage, 2 slots). May also use WIS to defend in an en- counter if neither you nor allies provoked hostilities.`, `Rod of Office. Save CHA vs. INT to command human- like target to kneel, lay down arms, or flee.`, `Iron Key. Permanently lock or unlock a door. 1 use. 38.`, `Sacrificial Dagger. A black, wavy blade (d6 damage). With a free hand, you may spend HP in place of stamina to cast witchcraft spells. May use your CHA bonus in place of level to determine max S when casting.`, `Saint's Ashes. Each pinch used counts as 1 stamina toward casting a theurgy spell (up to 3 pinches), or throw all 3 pinches on a fire while repairing an ordinary broken weapon to make it glow brightly, blinding unholy enemies while they look toward it.`, `Sacred Medallion. Add your WIS bonus to any HP you restore with theurgy. May use your WIS bonus in place of level to determine max S when casting.`, `Septifocals. Seven-lensed spectacles with gold wire frames. Spend 1 stamina to sense a target’s name, HD, HP, ARMOR, stamina, souls held, and prepared spells.`, `Silver Wings. Worn on back; they move on their own to deflect attacks (+2 ARMOR, 2 slots).`, `Spacious Satchel. Can stow an impossible number of 1-slot or smaller items. Requires rooting around for several minutes with decent lighting to retrieve items.`, `Starmetal. Graft into an ordinary weapon to increase damage 1 die size; count its damage as magical. 1 use.`, `Summoning Stone. Once per hour, scratch a circle for a 50/50 chance to summon a spirit (d10 HD) of a random Background. Spirits under 5 HD are helpful; over 6 HD are evil; 5–6 HD spirits are unpredictable.`, `Tiny Steeds. Quartet of wooden figurines (1 slot). Command to grow into a mount (2 HD) or turn back.`, `Titan’s Key. Giant brass key, usable as a two-handed blunt weapon (d12 damage, 4 slots). Said to fit a lock securing an even greater treasure.`, `Trisagonist Skull. Six-eye-socketed and pearlescent. Hold aloft to make it thrum with song, bathing area in white light as all carried souls nearby spiral upward. Souls may be intercepted within 1 round before they fly skyward, after which skull crumbles to dust.`, `Waxen Hand. Can cast and be taught spells. (Rub its fingers over the pages.) When you roll a 1 with it (or whenever you choose), it casts a spell at random. Fingers move when not in use, making arcane signs.`, `Xeno’s Grimoire. Contains d4 + 1 random spells. One can be learned instantly; others require a mentor`],
   gold_and_gems: [`100 Gold`, `Small Emerald (100 Gold)`, `Small Ruby (100 Gold)`, `200 Gold`, `Amethyst Brooch (200 Gold)`, `Ruby Ring (200 Gold)`, `300 Gold`, `Crystal Necklace (300 Gold)`, `Amethyst Necklace (300 Gold)`, `400 Gold`, `Emerald Crown (400 Gold)`, `Ruby Crown (400 Gold)`, `500 Gold`, `Amethyst Figurine (500 Gold)`, `Emerald Orb (500 Gold)`, `Ruby Orb (600 Gold)`, `Diamond (700 Gold)`, `Diamond Crown (800 Gold)`, `Space Crystal (900 Gold)`, `Space Crystal Crown (1000 Gold)`],
 }
-
 function selectRandom_3fv() {
-  document.getElementById('outputText_3fv').innerHTML = expandString(`Loot the Body:<br />{Loot the Body/Pickpocket}<br />{Loot the Body/Pickpocket}<br /><br />Treasure Chest:<br />{Loot the Body/Pickpocket}<br />{Magic Items}<br />{Gold and Gems}<br /><br />Magic Items:<br />{Magic Items}<br /><br />NOTES:<br />Loot the Body is for exactly what it sounds like as well as pickpocketing people and looting furniture. It has a small chance of giving a Magic Item but will never yield very large amounts of gold.<br /><br />Treasure Chest is for exactly what it sounds like. It will always yield 1 Loot the Body result, 1 large amount of gold, and 1 magic item. I might roll at the table to decided if the chest contains all 3 results or not.<br /><br />Magic Items is for exactly what it sounds like and it doesn't roll on any other table, most of its results are from Grave right now.<br /><br />Sources: Grave, Maze Rats, Die Trying, DonJon's pickpocket loot generator, AD&D Dungeon Master's Guide, probably another place.<br />`, lists_3fv)
+  document.getElementById('outputText_3fv').innerHTML = expandString(`Loot the Body:<br />{Loot the Body/Pickpocket}<br />{Loot the Body/Pickpocket}<br /><br />Treasure Chest:<br />{Loot the Body/Pickpocket}<br />{Magic Items}<br />{Gold and Gems}<br /><br />Magic Items:<br />{Magic Items}<br />`, lists_3fv)
 }
-
 </script>
 
-<p><pre>[map]
+<br>
+
+<pre>RANDOM ENCOUNTER GENERATOR</pre>
+
+<button onclick='selectRandom_xvl()'>Generate</button>
+<div id='outputText_xvl'></div>
+<script>
+  function expandString(str, map) {
+  	var recur_limit = 20
+  	while (str.match(/{.*?}/) && recur_limit > 0){
+  		str = str.replace(/{.*?}/g, (match) => {
+  			var input = match.toLowerCase().replace(/ /g, '_').replace(/[^a-z0-9_-]/g,'').split('_-')
+  			var key = input[0]
+
+  			if (!map.hasOwnProperty(key))
+  				return key
+
+  			if (input.includes(`u`)) {
+  				key_u = key+`_unique`
+  				if (!map.hasOwnProperty(key_u) || map[key_u].length == 0)
+  					map[key_u] = map[key].slice()
+  				return map[key_u].splice(Math.floor(Math.random() * map[key_u].length), 1);
+  			}
+
+  			return map[key][Math.floor(Math.random() * map[key].length)]
+  		})
+  		recur_limit -= 1
+  	}
+  	return str
+  }
+  var lists_xvl = {
+  	fortress: [`Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword)) `, `Chained Beasts (2HD, +2 Defense, Good Punch, +6 Attack, 2d6 damage)`, `Evil Necromancer-Priest-Wizard-Monster, Greater Skeleton Mage`, `Shambling Bone + Tentacle Pile`, `Giant Skeleton`, `Demon #1`, `Demon #2`, `Death Lord (9 HD, +10 Attack, +10 Defense, 75% magic resistance, 10% reflect magic, The fearsome powers of the death knight derive largely from its use of magic. It continually generates fear in a 5' radius, can create a wall of ice at will and has innate powers of detect magic and detect invisibility.)`],
+  	level_1: [`Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))`, `Goblins (1 or 2HD, Random Goblin Ability, +1 Attack, 1d6 damage daggers and shortbows)`, `Weapon-Headed Lizards (1 or 2HD, +2 Defense, x2 +1 Attacks, 1d8 (sword), 1d6 (mouth is daggers))`, `Eyeray Slug* (6HD, +10 Defense (shell/body), +8 Defense (eye stalks), +2 Attack, 2d4, Eye Rays)`, `Mutant Rat-Man* (3HD, +1 Defense, x2 +2 Attacks, 1d8 (sword), 1d4 (dagger tail))`, `Lizard-Lord Man-Slayer* (4HD, 2x +4 Attacks, 1d6 damage for each, Mouth is Daggers)`],
+  	level_2: [`Giant Leeches (1 or 2HD, +1 Defense, 50% chance to attach to an unsuspecting character if they stray into a leech-infested pool, drains 1 HP per round. +1 Attack, 1d4)`, `Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))`, `Weapon-Headed Lizards (1 or 2HD, +2 Defense, x2 +1 Attacks, 1d8 (sword), 1d6 (mouth is daggers))`, `Bloat (1HP, If damaged or touched at all, explodes causing Pit, Gas, or Flame)`, `Golgotha, Lord of Leeches* (6HD Biomancer-Barbarian, Spells: Mutate, Curse, Monsterize. +4 Defense, +4 Attack (Notched Axe), 1d8+1 damage, dismembers on an 8`, `Fire Toad Imp (4 HD, +0 Defense, Fireball: 30' range, 5' radius, save or damage=current HP.) `, `Tunnel Worm (9+3 HD, +9 Attack, 2d4, +6 Defense, Mandibles rend armor after 3 rounds of chewing.)`, `Necrophidius/Death Worm (2 HD, +8 Defense, +1 Attack, 1d8 Damage and Save vs. Paralysis, Dance of Death: Save vs. Immobilize)`],
+  	level_3: [`Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))`, `Skeleton Mage`, `Grell (5HD, +6 Defense, Immune to Lightning, x10 +4 Attacks, 1d4 damage each (tentacles), Save vs. Paralysis & x1 +4 Attack, 1d6 damage (beak), If tentacles are attacks they will be instantly severed but this will deal no damage to the creature, only hitting the brain will kill it.)`, `Bloat (1HP, If damaged or touched at all, explodes causing Pit, Gas, or Flame)`, `Ooze (3+3 HD, +2 Defense, +3 Attack, 2d8)`, `Doctor Gerou`, `Tunnel Worm (9+3 HD, +9 Attack, 2d4, +6 Defense, Mandibles rend armor after 3 rounds of chewing.)`, `Eye Killer (4HD, +5 Defense, +1 to Grapple, autohit every round thereafter for 1d6 crushing damage, Deathstare: Once/day. If approached by torches it will gather up the light and shoot out a death-ray. Save or die, take 3d6 damage on a successful save.)`],
+  	level_4: [`Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))`, `Skeleton Mage`, `Chained Spike-Headed Lizard`, `Demon #1`, `Demon #2`, `Demon #3`, `Necrophidius/Death Worm (2 HD, +8 Defense, +1 Attack, 1d8 Damage and Save vs. Paralysis, Dance of Death: Save vs. Immobilize)`, `Eye Killer (4HD, +5 Defense, +1 to Grapple, autohit every round thereafter for 1d6 crushing damage, Deathstare: Once/day. If approached by torches it will gather up the light and shoot out a death-ray. Save or die, take 3d6 damage on a successful save.)`],
+  }
+  function selectRandom_xvl() {
+  	document.getElementById('outputText_xvl').innerHTML = expandString(`RANDOM ENCOUNTERS:<br />LEVEL 1: <br />{LEVEL 1}<br /><br />LEVEL 2: <br />{LEVEL 2}<br /><br />LEVEL 3: <br />{LEVEL 3}<br /><br />LEVEL 4: <br />{LEVEL 4}<br /><br />FORTRESS: <br />{FORTRESS}`, lists_xvl)
+  }
+</script>
+<p><pre>
+
+<img src="/Users/jakebutcher/Documents/GitHub/untitled folder/dungeonzone.github.io/godskull_web/l1.jpg", style="max-width:50%;center;height:auto;padding: 5px">
+<br>
+<img src="/Users/jakebutcher/Documents/GitHub/untitled folder/dungeonzone.github.io/godskull_web/l2.jpg", style="max-width:50%;center;height:auto;padding: 5px">
+<br>
+<img src="/Users/jakebutcher/Documents/GitHub/untitled folder/dungeonzone.github.io/godskull_web/l3.jpg", style="max-width:50%;center;height:auto;padding: 5px">
+<br>
+<img src="/Users/jakebutcher/Documents/GitHub/untitled folder/dungeonzone.github.io/godskull_web/l4.jpg", style="max-width:50%;center;height:auto;padding: 5px">
 
 
+Fortress
+Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))
+Chained Beasts (2HD, +2 Defense, Good Punch, +6 Attack, 2d6 damage)
+Skeleton Mage
+Shambling Bone + Tentacle Pile
+Giant Skeleton
+Demon #1
+Demon #2
+Death Lord (9 HD, +10 Attack, +10 Defense, 75% magic resistance, 10% reflect magic, The fearsome powers of the death knight derive largely from its use of magic. It continually generates fear in a 5' radius, can create a wall of ice at will and has innate powers of detect magic and detect invisibility.
+
+level_3
+Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))
+Ooze (3+3 HD, +2 Defense, +3 Attack, 2d8)
+Eye Killer (4HD, +5 Defense, +1 to Grapple, autohit every round thereafter for 1d6 crushing damage, Deathstare: Once/day. If approached by torches it will gather up the light and shoot out a death-ray. Save or die, take 3d6 damage on a successful save.)
+Necrophidius/Death Worm (2 HD, +8 Defense, +1 Attack, 1d8 Damage and Save vs. Paralysis, Dance of Death: Save vs. Immobilize)
+Tunnel Worm (9+3 HD, +9 Attack, 2d4, +6 Defense, Mandibles rend armor after 3 rounds of chewing.)
+Skeleton Mage / Doctor Gerou
+X
+X
+
+level_4
+Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))
+Chained-Beast (Spike-Headed Giant Lizard)
+Demon #1
+Demon #2
+Demon #3
+Warlock? Skeleton Mage?
 
 FORTRESS
 1 Ghoul Knights
@@ -58,53 +135,42 @@ FORTRESS
 8 Death Lord
 
 LEVEL 1
-1 Ghoul Knights
-2 Goblins
-3 Weapon-Headed Lizards
-4 Eyeray Slug*
-5 Mutant Rat-Man*
-6 Lizard-Beast Man-Slayer*
+1 Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))
+2 Goblins (1 or 2HD, Random Goblin Ability, +1 Attack, 1d6 damage daggers and shortbows)
+3 Weapon-Headed Lizards (1 or 2HD, +2 Defense, x2 +1 Attacks, 1d8 (sword), 1d6 (mouth is daggers))
+4 Eyeray Slug* (6HD, +10 Defense (shell/body), +8 Defense (eye stalks), +2 Attack, 2d4, Eye Rays)
+5 Mutant Rat-Man* (3HD, +1 Defense, x2 +2 Attacks, 1d8 (sword), 1d4 (dagger tail))
+6 Lizard-Lord Man-Slayer* (4HD, 2x +4 Attacks, 1d6 damage for each, Mouth is Daggers)
 
 LEVEL 2
-1 Giant Leeches
-2 Ghoul Knights
-3 Weapon-Headed Lizards
-4 Pit Bloat
-5 Skeleton Mage
-6 Tunnel Worm
+1 Giant Leeches (1 or 2HD, +1 Defense, 50% chance to attach to an unsuspecting character if they stray into a leech-infested pool, drains 1 HP per round. +1 Attack, 1d4)
+2 Wizard's Skull (1 HD, -10 Defense, No Attacks, 1 Random Spell, 3MD, Wizard's Hat)
+3 Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))
+4 Bloat (1HP, If damaged or touched at all, explodes causing Pit, Gas, or Flame)
+5 Golgotha, Lord of Leeches* (6HD Biomancer-Barbarian, Spells: Mutate, Curse, Monsterize. +4 Defense, +4 Attack (Notched Axe), 1d8+1 damage, dismembers on an 8
+6 Fire Toad Imp (4 HD, +0 Defense, Fireball: 30' range, 5' radius, save or damage=current HP.)
+7 Giant Underwater Super Crab (Eye of the Deep)
+8 Grell (5HD, +6 Defense, Immune to Lightning, x10 +4 Attacks, 1d4 damage each (tentacles), Save vs. Paralysis & x1 +4 Attack, 1d6 damage (beak), If tentacles are attacks they will be instantly severed but this will deal no damage to the creature, only hitting the brain will kill it.)
 
 LEVEL 3
-1 Ghoul Knights
-2 Skeleton Mage
-3 Bladed Mutant-Horror
-4 Gas Bloat
-5 Biomancer*
-6 Tunnel Worm
+1 Ghoul Knights (3HD, +6 Defense, 2x +1 Attacks, 1d4 and save vs. Paralysis (claws), and 1d8 (sword))
+2 Ooze
+3 Necrophidius with Flameskull head
+4 Vampire Skull (Ice spells, regeneration, cursed, blood sucking)
+5 Greater Ghoul Knight/Skeleton Knight
+6 Tunnel Worm (9+3 HD, +9 Attack, 2d4, +6 Defense, Mandibles rend armor after 3 rounds of chewing.)
+7 Eye Killer (4HD, +5 Defense, +1 to Grapple, autohit every round thereafter for 1d6 crushing damage, Deathstare: Once/day. If approached by torches it will gather up the light and shoot out a death-ray. Save or die, take 3d6 damage on a successful save.)
+8 Necrophidius/Death Worm (2 HD, +8 Defense, +1 Attack, 1d8 Damage and Save vs. Paralysis, Dance of Death: Save vs. Immobilize)
 
 LEVEL 4
 1 Ghoul Knights
 2 Skeleton Mage
-3 Bladed Mutant Horror
-4 Grell
-5 Chained Spike-Headed Lizard
-6 Tunnel Worm
-
-LEVEL 5
-1 Ghoul Knights
-2 Skeleton Mage
 3
-4 Chained Beast
+4
 5
-6
-
-LEVEL 6
-1 Ghoul Knights
-2 Skeleton Mage
-3 Giant Skeleton
-4 Chained Beast
-5
-6
-
+6 Tunnel Worm
+7 Necrophidius
+8 Eye Killer
 
 GODSKULL MEGAFORTRESS PREPARATIONS CHECKLIST
 Under-floors: 1 & 2 = DONE, Need player maps.
@@ -113,8 +179,16 @@ Tower 1:
 Tower 2:
 
 Treasure:
-Xerxes' Golden Flail
+Xerxes' Golden Flail (found)
+Mourner's Bell (found)
+Deed to the Manor of Lord Shit Dickerson (found)
+L1 Map (found)
+L2 Map ()
+L3 Map
+L4 Map
+6 Runes (5 doors, 1 for chest, each is 1 use and can be used on any lock)
 Eye of Vecna lol
+Lizard Lord's Crooked Sword
 Executioner's Axe
 Onyx Blade
 Vantablack Portable Hole
@@ -122,7 +196,7 @@ Vantablack Portable Hole
 Spellbooks:
 Dimension Door
 Transmute Death to Flame/Summon Fire Demon
-Biomancer's Codex (Mutate, Liquid Form, Summon Ooze, Monsterize)
+Biomancer's Codex (4 books bound together in a live octopus) (Mutate, Liquid Form, Summon Ooze, Monsterize)
 
 
 Skull NPCs (put one in each floor)
@@ -137,9 +211,9 @@ Major NPCs: Death-Lord
 
 ---
 
-FLOOR 1 (sharpie+pen scrawling)
+FLOOR 1 (sharpie+pen scrawling) Lizard people with metal weapons for heads + traps
 
-FLOOR 2 (USPS sticker)
+FLOOR 2 (USPS sticker) Flooded Level, Giant Leeches, Biomancer Barbarian Boss is eel tentacle man
 
 FLOOR 3 (USPS sticker)
 
